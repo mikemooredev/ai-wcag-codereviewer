@@ -81,7 +81,7 @@ async function analyzeCode(
 function createPrompt(file: File, chunk: Chunk, prDetails: PRDetails): string {
   return `Your task is to review pull requests. Instructions:
 - Write the responce always in british english
-- Provide the response in following JSON format:  {"reviews": [{"lineNumber":  <line_number>, "reviewComment": "<review comment>"}]}
+- Provide the response in following JSON format:{"reviews": [{"lineNumber":  <line_number>, "reviewComment": "<review comment>"}]}
 - Provide comments and suggestions ONLY if there is something to improve, otherwise "reviews" should be an empty array,
 - Consider only WCAG analysis with AA criteria,
 - Provide only what is non-conforming with WCAG,
